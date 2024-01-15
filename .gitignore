@@ -1,0 +1,16 @@
+tanel_bot
+.idea
+
+max_bot/tokens.json
+max_bot/guild_ids.json
+max_bot/guild_ids.txt
+max_bot/guilds_info.txt
+max_bot/chat_logs
+
+max_bot/resources/replies/idk.json
+max_bot/resources/replies/testz.py
+
+max_bot/create_log.py
+max_bot/delete_log.py
+
+max_bot/bot.py
