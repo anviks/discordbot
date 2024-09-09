@@ -1,0 +1,28 @@
+#############################################
+#                 Languages                 #
+#############################################
+
+msgid "en"
+msgstr "english"
+
+msgid "et"
+msgstr "estonian"
+
+#############################################
+#                Bot replies                #
+#############################################
+
+msgid "set_language_success_server"
+msgstr "Ok, I will now speak {language} in this server"
+
+msgid "set_language_success_category"
+msgstr "Ok, I will now speak {language} in {category}"
+
+msgid "set_language_success_channel"
+msgstr "Ok, I will now speak {language} in {channel}"
+
+msgid "ping_command_success.singular"
+msgid_plural "ping_command_success.plural"
+msgstr[1] "Got it, I will ping {target} {count} time."
+msgstr[2] "Got it, I will ping {target} {count} times."
+
