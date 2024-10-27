@@ -1,16 +1,16 @@
-from __future__ import annotations
-
-import json
+import importlib
+import inspect
 import os
+
 import discord.ext.commands
-import requests
 from aioconsole import ainput
 from colorama import Fore
-from discord import Intents, Activity
+from discord import Activity, ActivityType, Intents
+from discord.ext.commands import Bot, Cog, GroupCog
 from dotenv import load_dotenv
 
-from resources import commands, events
-from resources.commands import send_pings
+from .cogs.fun_cog import send_pings
+from .translator import Translator
 
 COMMAND_PREFIX = "$"
 
@@ -29,29 +29,23 @@ def run_discord_bot():
     async def on_ready():
         print(f"{bot.user} is now running!")
 
-        # img = requests.get('https://media1.tenor.com/m/bNPhV9IvmnkAAAAd/phonk-troll-face.gif').content
-        # img = requests.get(bot.application.icon.url).content
-        # await bot.user.edit(avatar=img)
+        registry = {Bot: bot, Translator: Translator()}
 
-        await bot.load_extension(commands.__name__)
-        await bot.load_extension(events.__name__)
-        await bot.tree.sync(guild=discord.Object(1043173920041357332))
+        for d in os.listdir('src/cogs'):
+            if d.endswith('.py'):
+                importlib.import_module('src.cogs.' + d[:-3])
+
+        for cls in Cog.__subclasses__():
+            if cls == GroupCog:
+                continue
+
+            annotations = inspect.get_annotations(cls.__init__)
+            annotations.pop('return', None)
+            kwargs = {key: registry[value] for key, value in annotations.items() if value in registry}
+            await bot.add_cog(cls(**kwargs))
+
         await bot.tree.sync()
-        await bot.change_presence(activity=Activity(name="your thoughts", type=2, state="🗿"))
-
-        guild_names = list(map(lambda x: x.name, bot.guilds))
-        guild_ids = list(map(lambda x: str(x.id), bot.guilds))
-
-        with open(f"{current_directory}/guild_ids.json", "w", encoding="utf-8") as f:
-            ids = dict(zip(guild_names, guild_ids))
-            json.dump(ids, f, indent=2, ensure_ascii=False)
-
-        with open(f"{current_directory}/guild_ids.txt", "w", encoding="utf-8") as f:
-            f.write("\n".join(guild_ids))
-
-        with open(f"{current_directory}/guilds_info.txt", "w", encoding="utf-8") as f:
-            for guild in bot.guilds:
-                f.write(repr(guild) + "\n")
+        await bot.change_presence(activity=Activity(name="your thoughts", type=ActivityType.listening, state="🗿"))
 
         await console_listener()
 
@@ -60,12 +54,12 @@ def run_discord_bot():
         channel = bot.get_channel(default_channel_id)
 
         while True:
-            message = await ainput()
+            message: str = await ainput()
 
             if not message:
                 continue
 
-            if message[0] != COMMAND_PREFIX:
+            if not message.startswith(COMMAND_PREFIX):
                 await channel.send(message)
                 continue
 
@@ -87,6 +81,9 @@ def run_discord_bot():
             elif command_name == 'dm':
                 target = bot.get_user(int(args[0]))
                 await target.send(' '.join(args[1:]))
+            elif command_name == 'reply':
+                target_message = await channel.fetch_message(int(args[0]))
+                await target_message.reply(' '.join(args[1:]))
             else:
                 print("Unrecognised command: " + command_name)
 
