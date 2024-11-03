@@ -3,13 +3,13 @@ import sqlite3
 from gettext import GNUTranslations, NullTranslations, translation as load_translation
 
 from discord import Interaction, Message
+from dotenv import load_dotenv
 
 from .helpers import cache
 
 __all__ = ['Translator']
 
 TRANSLATIONS_DIR = 'resources/translations/'
-DB_PATH = 'db/app.sqlite'
 
 type Id = int
 type OptionalId = Id | None
@@ -17,7 +17,8 @@ type OptionalId = Id | None
 
 class Translator:
     def __init__(self):
-        self.conn = sqlite3.connect(DB_PATH)
+        load_dotenv()
+        self.connection = sqlite3.connect(os.getenv('SQLITE_DB_PATH'))
         self._translations: dict[str, GNUTranslations] = {}
         self.load_translations()
 
@@ -65,7 +66,7 @@ class Translator:
         LIMIT 1;
         """
 
-        cursor = self.conn.cursor()
+        cursor = self.connection.cursor()
         cursor.execute(query, (channel_id, category_id, server_id))
         result = cursor.fetchone()
         cursor.close()
@@ -87,13 +88,13 @@ class Translator:
         DO UPDATE SET LanguageCode = ?;
         """
 
-        cursor = self.conn.cursor()
+        cursor = self.connection.cursor()
 
         for entity_type, entity_id in [('channel', channel_id), ('category', category_id), ('server', server_id)]:
             if entity_id is not None:
                 cursor.execute(query, (language, entity_type, entity_id, language))
 
-        self.conn.commit()
+        self.connection.commit()
         cursor.close()
 
     def get_translator(self, context: Interaction | Message):
