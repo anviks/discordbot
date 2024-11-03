@@ -80,29 +80,29 @@ The bot includes several commands and functionalities to interact with users on 
 
 ## Commands
 
-- `/ping <target> [count=1]`
+- `/ping <target> [count=1]`  
   Ping the specified user a number of times (default is 1).
 
-- `/say [message=ZWSP] [replying_to_message_id]`
+- `/say [message=ZWSP] [replying_to_message_id]`  
   Make the bot send a message (default is zero-width space) in the channel.
   Optionally, reply to a message by providing its ID.
 
-- `/dm <target> [message=ZWSP] [attachment]`
+- `/dm <target> [message=ZWSP] [attachment]`  
   Send a direct message to the specified user. Optionally, include an attachment.
 
-- `/info <course>`
+- `/info <course>`  
   Get information about a TalTech course.
 
-- `/mute <user> [seconds=0] [minutes=0] [hours=0] [days=0] [reason]`
+- `/mute <user> [seconds=0] [minutes=0] [hours=0] [days=0] [reason]`  
   Mute a user for a duration.
 
-- `/unmute <user> [reason]`
+- `/unmute <user> [reason]`  
   Unmute a user.
 
-- `/poll_remind <role> <message_id>`
+- `/poll_remind <role> <message_id>`  
   Pings every channel member with a specified role who hasn't reacted to a specified message.
 
-- `/set_language server|category|channel <language> [category|channel]`
+- `/set_language server|category|channel <language> [category|channel]`  
   Sets the language for the server, a category, or a channel.
 
 ## License
