@@ -23,10 +23,9 @@ class FunCog(commands.Cog):
     @app_commands.command(name='ping', description='Ping a user.')
     @app_commands.describe(target='The user to ping.')
     @app_commands.describe(count='The number of times to ping.')
-    async def ping(self, interaction: Interaction, target: Member, count: int | None):
+    async def ping(self, interaction: Interaction, target: Member, count: int = 1):
         channel: InteractionChannel = interaction.channel
         location = get_location(interaction)
-        count = count or 1
         response = get_response(interaction)
         t = self.translator.get_translator(interaction)
 
