@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 from ..helpers import get_location, get_response
-from ..logger import delete, entry, entry_dm
+from ..logger import entry, entry_dm
 from ..translator import Translator
 
 InteractionChannel = VoiceChannel | StageChannel | TextChannel | ForumChannel | CategoryChannel | Thread | PartialMessageable
@@ -12,8 +12,7 @@ InteractionChannel = VoiceChannel | StageChannel | TextChannel | ForumChannel | 
 
 async def send_pings(channel: InteractionChannel, target: User | Member, count: int):
     for i in range(count):
-        sent_message: Message = await channel.send(target.mention, delete_after=0)
-        delete(sent_message)
+        await channel.send(target.mention, delete_after=0)
 
 
 class FunCog(commands.Cog):
@@ -70,7 +69,7 @@ class FunCog(commands.Cog):
         else:
             await interaction.channel.send(message)
 
-        log_func(*location, f'⬆️ This message was ordered by {interaction.user}')
+        log_func(*location, f'{interaction.user} ordered me to say "{message}".')
 
     @app_commands.command(name="dm", description="DM someone")
     @app_commands.describe(target="The user to DM.")
@@ -86,4 +85,4 @@ class FunCog(commands.Cog):
 
         t = self.translator.get_translator(interaction)
         await get_response(interaction).send_message(t('dm_command_success', target=target.mention), ephemeral=True)
-        entry(*get_location(interaction), f'⬆️ {interaction.user} sent this direct message to {target}.')
+        entry(*get_location(interaction), f'{interaction.user} ordered me to DM {target} "{message}"')

@@ -19,7 +19,8 @@ class GeneralEventsCog(commands.Cog):
         await self.bot.process_commands(message)
 
     async def should_mirror(self, reaction: Reaction, user: Member | User) -> bool:
-        return reaction.is_custom_emoji() and reaction.emoji.name == "max" or await self.bot.is_owner(user)
+        return (reaction.is_custom_emoji() and reaction.emoji.name in ('max', 'maximilian')
+                or await self.bot.is_owner(user))
 
     @commands.Cog.listener()
     async def on_reaction_add(self, reaction: Reaction, user: Member | User):

@@ -16,7 +16,6 @@ COMMAND_PREFIX = "$"
 
 load_dotenv()
 
-current_directory = os.path.dirname(__file__)
 token = os.getenv('DISCORD_BOT_TOKEN')
 default_channel_id = int(os.getenv('DEFAULT_CHANNEL_ID'))
 
@@ -88,3 +87,7 @@ def run_discord_bot():
                 print("Unrecognised command: " + command_name)
 
     bot.run(token)
+
+
+if __name__ == '__main__':
+    run_discord_bot()
