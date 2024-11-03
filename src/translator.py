@@ -11,8 +11,8 @@ __all__ = ['Translator']
 
 TRANSLATIONS_DIR = 'resources/translations/'
 
-type Id = int
-type OptionalId = Id | None
+Id = int
+OptionalId = Id | None
 
 
 class Translator:
