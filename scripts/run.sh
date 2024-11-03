@@ -1,4 +1,7 @@
-#!/bin/bash
+if [[ "$#" -ne 1 ]]; then
+    echo "Usage: $0 <dev|prod>"
+    exit 1
+fi
 
 # Define the project root directory
 project_root="$PWD/.."
@@ -10,8 +13,20 @@ cd "$project_root" || exit
 
 venv_scripts="$project_root/.venv/bin"
 
-# Copy the .env.production file to .env
-cp "$project_root/.env.production" "$project_root/.env"
+if [[ "$1" == "dev" ]]; then
+    environment=development
+elif [ "$1" == "prod" ]; then
+    environment=production
+
+    # Install required packages using pip
+    "$venv_scripts/pip" install -r "$project_root/requirements.txt"
+else
+    echo "Usage: $0 <dev|prod>"
+    exit 1
+fi
+
+# Copy relevant values to .env
+cp "$project_root/.env.$environment" "$project_root/.env"
 
 # Define the translation directory and languages
 translations_directory="$project_root/resources/translations"
@@ -22,9 +37,6 @@ domain="messages"
 for lang in "${languages[@]}"; do
     msgfmt -o "$translations_directory/$lang/LC_MESSAGES/$domain.mo" "$translations_directory/$lang/LC_MESSAGES/$domain.po"
 done
-
-# Install required packages using pip
-"$venv_scripts/pip" install -r "$project_root/requirements.txt"
 
 # Run the main Python script
 "$venv_scripts/python" -m "src.main"

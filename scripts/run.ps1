@@ -1,10 +1,26 @@
+param (
+    [Parameter(Mandatory)]
+    [ValidateSet('dev', 'prod')]
+    [string]$Mode
+)
+
 $ProjectRoot = "$PSScriptRoot\.."
 Set-Location $ProjectRoot
 $env:PYTHONPATH = $ProjectRoot
 
 $VenvScripts = "$ProjectRoot\.venv\Scripts"
 
-Copy-Item -Path "$ProjectRoot\.env.development" -Destination "$ProjectRoot\.env"
+if ($Mode -eq 'dev')
+{
+    $Environment = 'development'
+}
+else
+{
+    $Environment = 'production'
+    & "$VenvScripts\pip" install -r "$ProjectRoot\requirements.txt"
+}
+
+Copy-Item -Path "$ProjectRoot\.env.$Environment" -Destination "$ProjectRoot\.env"
 
 $TranslationDir = "$ProjectRoot\resources\translations"
 $Languages = 'en', 'et'
@@ -16,3 +32,4 @@ foreach ($Lang in $Languages)
 }
 
 & "$VenvScripts\python.exe" -m src.main
+
