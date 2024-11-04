@@ -3,8 +3,10 @@ if [[ "$#" -ne 1 ]]; then
     exit 1
 fi
 
+script_path=$(dirname "$(realpath -s "$0")")
+
 # Define the project root directory
-project_root="$PWD/.."
+project_root="$script_path/.."
 
 # Add the project root directory to the PYTHONPATH
 export PYTHONPATH="$project_root"
@@ -13,9 +15,9 @@ cd "$project_root" || exit
 
 venv_scripts="$project_root/.venv/bin"
 
-if [[ "$1" == "dev" ]]; then
+if [[ $1 == "dev" ]]; then
     environment=development
-elif [ "$1" == "prod" ]; then
+elif [[ $1 == "prod" ]]; then
     environment=production
 
     # Install required packages using pip
