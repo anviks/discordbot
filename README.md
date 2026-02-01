@@ -68,11 +68,7 @@ The bot includes several commands and functionalities to interact with users on 
     SQLITE_DB_PATH=your_sqlite_db_path
     ```
 
-5. Create a `.sqlite` database file by any means and provide the path to the database file in the `SQLITE_DB_PATH`
-   environment variable. After that, run the table creation script in `scripts/init_db.sql` to create the necessary
-   table(s).
-
-6. Run the bot by executing:
+5. Run the bot by executing:
     - `scripts\run.ps1 dev` for development (Windows)
     - `scripts\run.ps1 prod` for production (Windows)
     - `scripts/run.sh dev` for development (Linux/MacOS)

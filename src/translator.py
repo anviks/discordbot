@@ -15,12 +15,22 @@ Id = int
 OptionalId = Id | None
 
 
+INIT_DB_SCRIPT = os.path.join(os.path.dirname(__file__), '..', 'scripts', 'init_db.sql')
+
+
 class Translator:
     def __init__(self):
         load_dotenv()
-        self.connection = sqlite3.connect(os.getenv('SQLITE_DB_PATH'))
+        db_path = os.getenv('SQLITE_DB_PATH')
+        os.makedirs(os.path.dirname(db_path), exist_ok=True)
+        self.connection = sqlite3.connect(db_path)
+        self._init_db()
         self._translations: dict[str, GNUTranslations] = {}
         self.load_translations()
+
+    def _init_db(self) -> None:
+        with open(INIT_DB_SCRIPT) as f:
+            self.connection.executescript(f.read())
 
     def load_translations(self) -> None:
         for language in os.listdir(TRANSLATIONS_DIR):
