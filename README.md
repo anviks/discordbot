@@ -71,8 +71,8 @@ The bot includes several commands and functionalities to interact with users on 
 5. Run the bot by executing:
     - `scripts\run.ps1 dev` for development (Windows)
     - `scripts\run.ps1 prod` for production (Windows)
-    - `scripts/run.sh dev` for development (Linux/MacOS)
-    - `scripts/run.sh prod` for production (Linux/MacOS)
+    - `bash scripts/run.sh dev` for development (Linux/MacOS)
+    - `bash scripts/run.sh prod` for production (Linux/MacOS)
 
 ## Commands
 
