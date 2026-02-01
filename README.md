@@ -25,7 +25,7 @@ The bot includes several commands and functionalities to interact with users on 
 - gettext: This package includes the `msgfmt` tool, which is used for compiling `.po` files into `.mo` files for
   translations. To install it:
     - Windows: `winget install GnuWin32.gettext`
-    - Linux: `sudo apt-get install gettext`
+    - Linux (Ubuntu): `sudo apt-get install gettext`
     - MacOS: `brew install gettext`
 - Libraries from `requirements.txt`
 
