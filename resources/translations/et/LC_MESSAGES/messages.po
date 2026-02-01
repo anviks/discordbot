@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Language: et\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#############################################
+#                 Languages                 #
+#############################################
+
+msgid "en"
+msgstr "inglise"
+
+msgid "et"
+msgstr "eesti"
+
+#############################################
+#                Bot replies                #
+#############################################
+
+msgid "set_language_success_channel"
+msgstr "Selge, räägin nüüd {language} keeles kanalis {channel}"
+
+msgid "set_language_success_category"
+msgstr "Selge, räägin nüüd {language} keeles kategoorias {category}"
+
+msgid "set_language_success_server"
+msgstr "Selge, räägin nüüd {language} keeles siin serveris"
+
+msgid "ping_command_success.singular"
+msgid_plural "ping_command_success.plural"
+msgstr[0] "Pingin {target} {count} korra..."
+msgstr[1] "Pingin {target} {count} korda..."
+
+msgid "say_command_success"
+msgstr "Tehtud!"
+
+msgid "dm_command_success"
+msgstr "Saatsin sõnumi kasutajale {target}."
+
+msgid "unmute_command_success"
+msgstr "Kasutaja {target} saab nüüd jälle rääkida."
+
+msgid "poll_remind_command_success"
+msgstr "Pingin kõiki, kes pole veel hääletanud."
+
+msgid "poll_remind_command_no_pings"
+msgstr "Kõik on juba reageerinud."
+
+msgid "info_command_no_such_course"
+msgstr "Ei leidnud sellist kursust."
+
+msgid "mute_command_target_admin"
+msgstr "Ei saa vaigistada administraatorit."
+
+msgid "mute_command_success_no_reason"
+msgstr "Kasutaja {target} on nüüd vaigistatud kuni {until}."
+
+msgid "mute_command_success"
+msgstr "Kasutaja {target} on nüüd vaigistatud kuni {until}. Põhjus: {reason}"

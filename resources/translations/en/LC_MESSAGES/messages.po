@@ -1,0 +1,54 @@
+#############################################
+#                 Languages                 #
+#############################################
+
+msgid "en"
+msgstr "english"
+
+msgid "et"
+msgstr "estonian"
+
+#############################################
+#                Bot replies                #
+#############################################
+
+msgid "set_language_success_server"
+msgstr "Ok, I will now speak {language} in this server"
+
+msgid "set_language_success_category"
+msgstr "Ok, I will now speak {language} in {category}"
+
+msgid "set_language_success_channel"
+msgstr "Ok, I will now speak {language} in {channel}"
+
+msgid "ping_command_success.singular"
+msgid_plural "ping_command_success.plural"
+msgstr[0] "Got it, I will ping {target} {count} time."
+msgstr[1] "Got it, I will ping {target} {count} times."
+
+msgid "say_command_success"
+msgstr "Done!"
+
+msgid "dm_command_success"
+msgstr "Direct message sent to {target}."
+
+msgid "unmute_command_success"
+msgstr "Unmuted {target}."
+
+msgid "poll_remind_command_success"
+msgstr "Sending ping to remind people to vote."
+
+msgid "poll_remind_command_no_pings"
+msgstr "Everyone has already reacted."
+
+msgid "info_command_no_such_course"
+msgstr "Couldn't find such course."
+
+msgid "mute_command_target_admin"
+msgstr "You can't mute an admin."
+
+msgid "mute_command_success_no_reason"
+msgstr "Muted {target} until {until}."
+
+msgid "mute_command_success"
+msgstr "Muted {target} until {until} for {reason}."
