@@ -1,0 +1,389 @@
+# Placeholders:
+#   - &name&: Name of the user
+#   - &ping&: Name of the user with @ (ping/mention)
+
+- is_reply: true
+  message: Tere, see on õige vastus.
+- is_reply: true
+  message: Tere,&name& kas see on päevaõppe valem või sessiooniõppe? Vabandust, palun.
+- is_reply: true
+  message: Jah, saan aru selle ma teen. Aitäh.
+- is_reply: true
+  message: Väga väga palun vabandust ma rohkem selles ära kirjuta ma luban sind.
+- is_reply: true
+  message: Palun ära tee selle väga palun sulle ma õppin iseseisvalt ja teen iseseisvalt
+    vastuseid kontrolltöö peale. Palun sind &ping&
+- is_reply: true
+  message: Aga sa tead selle testi 1 ja testi 2 küsimuseid ja vastuseid või sa ei
+    tea? Vabandust.
+- is_reply: true
+  message: Saan aru sind, hästi ыoovin sulle ka edu õpingutes.
+- is_reply: true
+  message: Hästi, saan aru vaatan mis õppejõud räägib ja õppida ka hästi, aitäh
+- is_reply: true
+  message: Ja see ei ole näidis küll.
+- is_reply: true
+  message: Aga mul on vaja viskada 50 punkti kokku Testi 1 eest kontrolltöö nr 1 Füüsika
+    mittefüüsikutele aine, vabandust väga palun.  Noh see on Moodle's esimene kontrolltöö
+    selliseid küsimusi ja kontrolltöö toimub selliseid küsimusi, palun saada aru mind.
+- is_reply: false
+  message: Neljandal ülesanne ma saan aru, et ülesanne on Moodle's novembril kuu esimene
+    kontrolltöö.
+- is_reply: false
+  message: Ja viies ülesanne Testi 1 kontrolltöö nr 1 Füüsika mittefüüsikutele aine
+    ma saan aru õigesti, et on vaja valitud õige vastuseid küsimuseid?
+- is_reply: false
+  message: Ja mul on teine selline küsimus, et  selles kolmandal ülesanne ma natuke
+    ei saa aru  see on siin kirjas   Kaks ühesugust autot …  ja  lõpp lause ei ole
+    missugune lause on lõpp?
+- is_reply: false
+  message: Mul on küsimus selline, et kas ma saan aru õigesti, et kontrolltöö 1 Testi
+    1 füüsika mittefüüsika selliseid küsimuseid on novembris jah? Vabandust, palun.
+- is_reply: false
+  message: Hästi.
+- is_reply: true
+  message: Privaatsõnume? Vabandust.
+- is_reply: false
+  message: Tere, kas ma saan küsida? Palun.
+- is_reply: true
+  message: Hästi,saan aru. Aitäh.
+- is_reply: true
+  message: Ma juba muutsin aga millal ma lugen selle kanalis juba on spammide. Ära
+    teha spammide. Mis see kanal on? Ma ei saa aru mille on vaja?
+- is_reply: false
+  message: Tere!Palun ära spammide ma juba väsinud lugeda noh
+- is_reply: true
+  message: Jah, saan aru.
+- is_reply: false
+  message: Miks sa naerab &ping& ?Vabandust, palun.
+- is_reply: true
+  message: Ma lihtsalt küsisin &ping&  kontrolltöö peale.
+- is_reply: true
+  message: Vabandage, palun hästi ma ei teha rohkem pingi sind.
+- is_reply: false
+  message: '&ping& Kas sa arvad, et hulgad seoseid süsteemid aine esimene kontrolltöö
+    sinu jaoks on  keeruline või lihtne? Minu jaoks on esimene kontrolltöö hulgad
+    aine on natuke lihtne võib olla raske. Veel ei tea, täpselt.'
+- is_reply: true
+  message: Aitäh, siis m * m = m see küll õige sama. Jah, 1 * 1 = 1 küll ja 0 * 0
+    = 0 seda ka küll ma saan aru. Ma lihtsalt ei saanud õppejõude käekirjast natuke
+    aru, mida ta kirjutas. Aga praegu saan aru. Aitäh &ping&
+- is_reply: true
+  message: m korrutamine m = n  õppejõud kirjutab või missugune täht? Ma ei näe natuke.
+- is_reply: true
+  message: Aga veel on lahendus  selle hulgad aine? Või ainult selline lahendamine?
+- is_reply: true
+  message: Aitäh ma selle teen ja ma pean saan aru ka selle lahendamine.
+- is_reply: true
+  message: Kas see on hulgad aine?
+- is_reply: false
+  message: Aitäh.
+- is_reply: false
+  message: Okei &ping&
+- is_reply: false
+  message: Ma olen natuke haige, ma täna ei käinud hulgad aine, ma käin ainult järgmisel
+    nädalal neljapäval päevaõppe gruppis, siis küsin kontrolltöö esimene peale &ping&
+- is_reply: false
+  message: Aga millal on esimene kontrolltöö päevaõppe ja sessiooniõppe? &ping&
+- is_reply: true
+  message: Hästi siis ma lugen sellel slaidid ja teen konspekti ka, sest et ma pean
+    õppida ja valmistada kontrolltöö 1.
+- is_reply: false
+  message: '&ping&'
+- is_reply: false
+  message: https://drive.google.com/drive/folders/1qgN4YGRt2Rtb8Bg2uaeXifY19yqp_ncl
+    Vabandust selliseid materjalid.
+- is_reply: false
+  message: '&ping& Tere, kas ma saan aru õigesti, et  https://docs.google.com/presentation/d/1iWAcOS36fP_ewtns3gejWvCZuYw0NRQ_/edit#slide=id.p1
+    selle hulgad süsteemid aine on päevaõppe materjalid slaidid ka jah? Või ainult
+    sessiooniõppe?'
+- is_reply: true
+  message: Loeng ühel päeval ja rühmatöö muud päeval.
+- is_reply: true
+  message: Rühmatöö on üks kord, vaid kaks kord.
+- is_reply: false
+  message: Hästi saan aru sulle aitäh &ping&
+- is_reply: false
+  message: Tere! Mis see on uus kanalis mis see tähendab? Vabandage,palun.
+- is_reply: true
+  message: Sest, et see on õige vastus 0010 ja 0110 ja  küll Tulemus on 1000
+- is_reply: true
+  message: Palun ära tee spammide, ma  olen väsinud küll lugeda kõiki kanalis sellel
+    serveris.
+- is_reply: true
+  message: Jaah see on õige vastus palun küsida mulle ma tean vastuseid mul on hinne
+    selle aine 1.
+- is_reply: true
+  message: okei, lihtsalt sa saatsid ekraanipilti selle aine Vabaõpe ja ma küsisin
+    selline küsimus sinuga. &ping&
+- is_reply: true
+  message: SA õppid Avatud ülikoolis? &ping&
+- is_reply: true
+  message: Saan aru, aga ma õpin Avatud Ülikooli noh gruppis IADB jah see on õgige
+    vabandust &ping&
+- is_reply: true
+  message: Okei,aitäh selles. Aga ma ei saa aru lihtsalt kirjutada selles kanalis
+    ja ma ei saa aru. Vabandage.
+- is_reply: true
+  message: Tere vabandust mis see aine on? &ping&
+- is_reply: false
+  message: Tere,kõigile ma selle aine deklareerida sellel semestril. Mul on selline
+    küsimus, mis on vaja selle aine teha missuguseid ülesandeid kodune töö või mida?
+    Ma ei saa aru natuke selles aines. Ja arvestustöö toimub ülikoolis või kodus?
+    Vabandust, palun kõigist.
+- is_reply: true
+  message: Ma selle aine läbitud kursuse mul hinne on 1. Mul on korras. Ah jah täpsel
+    GUARD ei inverteeri  ma olen nõus sinuga &ping&
+- is_reply: true
+  message: Jah, see tähendab õige vastuse &ping&
+- is_reply: true
+  message: Jah, see vastuse valik on õige sa valisid. Tubli &ping&
+- is_reply: false
+  message: Hästi saan aru sind &ping&
+- is_reply: false
+  message: Tere! Selle aine mul on ka läbitud Tõenäosusteeoria ja matemaatiline statistika
+    icy0006 aine  eelmisel aastal sügisel semestril ja mul on kõik korras ja läbitud
+    kursuse ja hinne 3 mul on läbitud kursuse. Kellele on vaja abi kirjutada mulle
+    privaat sõnume.
+- is_reply: false
+  message: Tere! Selle aine mul on kõik korras ja ma läbitud eelmisel semestril diskreetne
+    matemaatika aine Harri Lensile ja mul on hinne 1 kõik korras läbitud kursuse.
+    Kellele on vaja abi kirjutada mulle privaat sõnume.
+- is_reply: false
+  message: Hästi &ping&
+- is_reply: true
+  message: Hästi pärast vaatan ma praegu on loengus püütoni vabandust.
+- is_reply: true
+  message: Mis tähebdab winx?
+- is_reply: true
+  message: Tere! Mis asi?
+- is_reply: true
+  message: Ja rühmatöö ei ole asemel testi ma selgitasin juba sulle. Palun lugeda
+    minu sõnumeid.
+- is_reply: false
+  message: Kas sa saad aru mind kõigist? &ping&
+- is_reply: false
+  message: Sellel aine ainult läheb rühmatöö punktide, kontrolltöö kaks testi moodle's
+    toimub läheb punkti ja eksam kui on vaja. Kui rühmatöö ja kontrolltöö punktid
+    50 kokku see on hinne 5. Noh mulle oli kontrolltöö vähem punkti siis ma tegin
+    eksamk majandusõpetuse aine eelmisel sügisel semestril. Vabandust &ping&
+- is_reply: true
+  message: Testi see ei lähe arvesse, see testi moodle's on sama iseseisva kontrollida
+    testi moodle's.
+- is_reply: true
+  message: Tere! Ma tean rühmatöö on iga praktikumi nädala. Ma selle aine läbida kursuse
+    juba eelmisel sügisel ja mulle hinne on 1 ja kõik korras.
+- is_reply: true
+  message: See on õiged vastuseid sa valid. Tubli!
+- is_reply: false
+  message: See aine ma juba läbitud eelmisel aastal sügisel ja mulle hinne on 1. Mul
+    on korras, ma saan abistada kui on abi?
+- is_reply: true
+  message: Vabandust, rohkem ära teen tagidega
+- is_reply: false
+  message: Aitäh
+- is_reply: false
+  message: '&ping&'
+- is_reply: false
+  message: Aitäh
+- is_reply: false
+  message: '@éveryone Mul on täna sünnipäev'
+- is_reply: false
+  message: Saan aru,okei.
+- is_reply: false
+  message: Aga sul millal loeng hulgad? &ping&
+- is_reply: false
+  message: Aitäh &ping&
+- is_reply: false
+  message: Ma mõtlen, et ma ei saa kuulata videosalvestused. On vaja lihtsalt ülikoolis
+    käin loengus hulgad ained. Ma käin juba järgmisel neljapäeval tunnis ülikoolis
+    hulgad seoseid aine, sest et kodus ei saa vaadata 2021. aastaal.
+- is_reply: true
+  message: Ma mõtlen, et mõlemad.
+- is_reply: true
+  message: Aga see link slaidide jaoks päevaõppe või sessioniõppe? Vabandust.
+- is_reply: false
+  message: Ma eelmisel aastal ära deklareeritud selle hulgad ained. Ma deklareerisin
+    sellel semestril,vabandust palun. Okei, ma saan aru sulle &ping& , et ma loen
+    sellel aastal sellel semestril slaidide lingis ja õppida pähe ka, sest et varsti
+    on esimene kontrolltöö ja on vaja teen suurepärane ja viskada miinimumi punkti
+    või rohkem, kui ma saan.
+- is_reply: true
+  message: aga ma olen päevaõppe 🙂
+- is_reply: true
+  message: Noh siis ma saan aru õigesti, et ma pean slaidide lugeda 2021.aastal jah?
+- is_reply: true
+  message: Ma ei tea, sest et ma ei ole tänase loengus ülikoolis.
+- is_reply: false
+  message: Minu õppeinfo nuppuda ja pärast Õppematerjalid ÕISIS ja seal on hulgad
+    seoseid nuppuda ja lingis on slaidide ja videosalvestuse  &ping&
+- is_reply: true
+  message: ÕISis õppematerjalide seal.
+- is_reply: true
+  message: Hästi, aga kontrolltööd  ja eksam ka on hulgad seoseid aine sellel eelmisel
+    2021.aastal materjalide slaidide ma saan aru õigesti?
+- is_reply: true
+  message: Tere! Mul on selline aine, aga see lingis on praeguse slaidid sellel semestril
+    jah? Ma saan aru õigesti jah?Vabandust, palun.
+- is_reply: false
+  message: '&ping& kas sul on füüsika mittefüüsika aine jah?'
+- is_reply: false
+  message: hästi ei teha rohkem vabandust palun
+- is_reply: false
+  message: Miks selle on?
+- is_reply: false
+  message: Tervist, kas võib küsida selle aine?
+- is_reply: true
+  message: NAHUI DI SDALAS V ETOM ZHIZNI TO
+- is_reply: false
+  message: idi ti tozhe nahui pz
+- is_reply: false
+  message: ei taha rääkida
+- is_reply: false
+  message: Mul on pohui
+- is_reply: false
+  message: Vabandust, palun, see oli varem. Vabandasin kõigi abiõppejõude eest. Vabandan,
+    palun, vabandan veel kord kõigi abiõpejõude eest. Ma deklareerin ÕISis järgmisel
+    aastal sügisel semstril püütoni algkursuse ITI0102 aine. Palun vabandust, ma palun
+    sind, Ago. @Ago. Head päeva,Ago.
+- is_reply: true
+  message: Tere, mis sul probleem on?Ma saan aidata sulle.
+- is_reply: true
+  message: Okei,siis  tühista praegu PyCharmi programmis ja download uus PyCharm versiooni
+    ja see on korras. Mul on PyCharmi versioon Community Edition 2022.1.1. Laadida
+    palun PyCharm Community Edition versioon ja kõik korras.
+- is_reply: true
+  message: Missugune sulle on PyCharmi versioon? Vabandust.
+- is_reply: false
+  message: Tere, Nele. Quizi 4.nädala ei ole typosid. Aitäh. :)
+- is_reply: false
+  message: chiken mul on küsimus missugune gitlabi projekt on vaja?
+- is_reply: true
+  message: EX01-EX02 juba tähtaeg möödunud, miks sa kaitsta praegu?
+- is_reply: true
+  message: Noh  jah kui sa tegid EX01, siis sulle on 0 punti ja kaitsmise sa ei saa
+    kaitsta 0% pärast tähtaega.
+- is_reply: true
+  message: '&name& idi nahui'
+- is_reply: false
+  message: '&name&, ma vabandan sinu ees solvangu pärast ähvarduse eest, mille kirjutasin
+    pythoni serverisse viimast korda kõige eest. Vabandan mitte kunagi enam elus Ma
+    palun sind solvangu eest ähvarduse eest kõige eest ma vabandan sinu ees mitte
+    saada midagi dekanaati, mul on vaja õppida ja proovida, ma pean ülikooli lõpetama,
+    palun, palun, palun. Tere,&name&!'
+- is_reply: false
+  message: Ma kõigist vabandan sulle eest &name& abiõppejõude rohkem ma ei tee selles
+    väga palun sind.
+- is_reply: false
+  message: Halbade asjade ja halbade tegude pärast vabandan sinu ees kõige eest.Palun
+    palun.Ma ei käitu enam kunagi elus niimoodi.
+- is_reply: false
+  message: Palun, &name& abiõppejõude. Väga palun sind.
+- is_reply: false
+  message: Ma vabandan kõigist eest. Ma rohkem ei tee seda ma luban sind &name& abiõppejõud.
+- is_reply: false
+  message: Olgu, tänan vabanduse eest. Aga palun peatage teised üliõpilased, kes tahavad
+    dekanaati sõnumit saata, palun vabandust kõigi TalTechi üliõpilaste eest. Vabandan
+    kõigi eest Nele aidake mind palun palun palun rääkige kõigi üliõpilastega, ma
+    palun Teid ja rääkide püütoni algkursuse aine abiõppejõude, palun ma palun teid,
+    &name&.
+- is_reply: false
+  message: Vabandust kõigist eest, palun Teid, &name& abiõppejõud.
+- is_reply: false
+  message: Palun. Väga palun Teid, &name& abiõppejõud. Väga palun Teid.
+- is_reply: false
+  message: '&ping&'
+- is_reply: false
+  message: Kas sa ole siin praegu?
+
+# From Python 24 server
+- is_reply: false
+  message: Tere! Kas võib küsimus?
+- is_reply: false
+  message: Hästi.
+- is_reply: false
+  message: Mul on natuke probleemi testeri näitab vigu, miline probleem on?
+- is_reply: false
+  message: Jah
+- is_reply: false
+  message: Mis see on? &ping&
+- is_reply: true
+  message: saan aru.
+- is_reply: false
+  message: mis see on
+- is_reply: false
+  message: ma ei saa aru
+- is_reply: false
+  message: Tere!
+- is_reply: false
+  message: Mul tekib vigu, missugune koodi tuleb selline vigu? Vabandage, palun.
+- is_reply: false
+  message: '[0:11] kas see sobib? ja :: -1 kustuta jah? &ping&'
+- is_reply: false
+  message: 'x see on number on vaja kirjutada? jah? &ping&'
+- is_reply: false
+  message: kus see on vaja muuta?
+- is_reply: false
+  message: aga ma kirjutasin näiteks 2, aga viga jääb
+- is_reply: false
+  message: Rida 16 ma vaatan, jah
+- is_reply: false
+  message: Jah ma juba parandatud, aitäh.
+- is_reply: false
+  message: Jah ma kustutasin ühe slice
+- is_reply: false
+  message: aitäh
+- is_reply: false
+  message: korras &ping&
+- is_reply: false
+  message: Tere! Miks tekib kahe vead testeris?
+- is_reply: false
+  message: Vabandage.
+- is_reply: false
+  message: Mis asi? Ei saanud aru. 🙂
+- is_reply: false
+  message: Palun abi mulle selline koodi parandada selgitada.
+- is_reply: false
+  message: testeri vigu annab kahe vead.
+- is_reply: false
+  message: siin kirjuta palun, ära kirjuta privaatsõnume, sest et mulle vanemad
+    kontrollivad mulle discordi privaatsõnumeid . Vabandust, palun. &ping&
+- is_reply: false
+  message: Mul on probleemi testeri vead kas sobib abi?
+- is_reply: false
+  message: Tere! Kas võib küsimus projekti testeri vead?
+    Ma natuke ei saanud aru missugune loogika on testeri vead tekib.
+- is_reply: false
+  message: Palun ei  küsi küsimusi, see on tunnikontroll keegi ei saa abi.
+- is_reply: false
+  message: Hästi saan aru.
+- is_reply: false
+  message: SASI XUI
+- is_reply: false
+  message: please taltech is bad university
+- is_reply: false
+  message: IT IS NAHUI PIDOR
+- is_reply: false
+  message: I STUDY MED BRAT
+- is_reply: false
+  message: Ma olen lol
+- is_reply: false
+  message: ma ei ole inimene
+    ma olen loom
+
+# From DMs
+- is_reply: false
+  message: Jah tubli sa oled saadud hinne 5 kursuse.;)
+- is_reply: false
+  message: Ma olen abiõppejõud.
+- is_reply: false
+  message: Sa oled tubli
+- is_reply: false
+  message: я тебя взломаю
+    щас твой дискорд
+    127.0.0.1
+    Твой айпи
+- is_reply: false
+  message: хорошо а ты красивая
+    скажи пожалуйсат 
+    я Аго луберг 

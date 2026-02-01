@@ -1,6 +1,5 @@
 .idea/
 
-/resources/responses.yaml
 /scripts/copy_to_server.ps1
 /po_header.txt
 /db/
