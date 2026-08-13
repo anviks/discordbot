@@ -15,7 +15,7 @@ Id = int
 OptionalId = Id | None
 
 
-INIT_DB_SCRIPT = os.path.join(os.path.dirname(__file__), '..', 'scripts', 'init_db.sql')
+INIT_DB_SCRIPT = os.path.join(os.path.dirname(__file__), '..', '..', 'scripts', 'init_db.sql')
 
 
 class Translator:
