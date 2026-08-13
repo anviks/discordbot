@@ -40,5 +40,7 @@ for lang in "${languages[@]}"; do
     msgfmt -o "$translations_directory/$lang/LC_MESSAGES/$domain.mo" "$translations_directory/$lang/LC_MESSAGES/$domain.po"
 done
 
+uv sync
+
 # Run the main Python script
-"$venv_scripts/python" -m "src.main"
+"$venv_scripts/discordbot"
