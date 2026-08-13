@@ -16,9 +16,7 @@ class CustomResponse:
         self.is_reply = is_reply
 
     def replace_placeholders(self, target: User | Member) -> None:
-        self.message = (self.message
-                        .replace('&ping&', target.mention)
-                        .replace('&name&', target.name))
+        self.message = self.message.format(name=target.name, ping=target.mention)
 
     @classmethod
     def get_random_response(cls) -> 'CustomResponse':

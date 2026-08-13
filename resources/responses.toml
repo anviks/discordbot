@@ -1,8 +1,8 @@
 # Random replies the bot sends when triggered.
 #
 # Placeholders:
-#   &name&  - name of the user
-#   &ping&  - the user as a mention
+#   {name}  - name of the user
+#   {ping}  - the user as a mention
 
 [[response]]
 is_reply = true
@@ -10,7 +10,7 @@ message = "Tere, see on õige vastus."
 
 [[response]]
 is_reply = true
-message = "Tere,&name& kas see on päevaõppe valem või sessiooniõppe? Vabandust, palun."
+message = "Tere,{name} kas see on päevaõppe valem või sessiooniõppe? Vabandust, palun."
 
 [[response]]
 is_reply = true
@@ -22,7 +22,7 @@ message = "Väga väga palun vabandust ma rohkem selles ära kirjuta ma luban si
 
 [[response]]
 is_reply = true
-message = "Palun ära tee selle väga palun sulle ma õppin iseseisvalt ja teen iseseisvalt vastuseid kontrolltöö peale. Palun sind &ping&"
+message = "Palun ära tee selle väga palun sulle ma õppin iseseisvalt ja teen iseseisvalt vastuseid kontrolltöö peale. Palun sind {ping}"
 
 [[response]]
 is_reply = true
@@ -90,11 +90,11 @@ message = "Jah, saan aru."
 
 [[response]]
 is_reply = false
-message = "Miks sa naerab &ping& ?Vabandust, palun."
+message = "Miks sa naerab {ping} ?Vabandust, palun."
 
 [[response]]
 is_reply = true
-message = "Ma lihtsalt küsisin &ping&  kontrolltöö peale."
+message = "Ma lihtsalt küsisin {ping}  kontrolltöö peale."
 
 [[response]]
 is_reply = true
@@ -102,11 +102,11 @@ message = "Vabandage, palun hästi ma ei teha rohkem pingi sind."
 
 [[response]]
 is_reply = false
-message = "&ping& Kas sa arvad, et hulgad seoseid süsteemid aine esimene kontrolltöö sinu jaoks on  keeruline või lihtne? Minu jaoks on esimene kontrolltöö hulgad aine on natuke lihtne võib olla raske. Veel ei tea, täpselt."
+message = "{ping} Kas sa arvad, et hulgad seoseid süsteemid aine esimene kontrolltöö sinu jaoks on  keeruline või lihtne? Minu jaoks on esimene kontrolltöö hulgad aine on natuke lihtne võib olla raske. Veel ei tea, täpselt."
 
 [[response]]
 is_reply = true
-message = "Aitäh, siis m * m = m see küll õige sama. Jah, 1 * 1 = 1 küll ja 0 * 0 = 0 seda ka küll ma saan aru. Ma lihtsalt ei saanud õppejõude käekirjast natuke aru, mida ta kirjutas. Aga praegu saan aru. Aitäh &ping&"
+message = "Aitäh, siis m * m = m see küll õige sama. Jah, 1 * 1 = 1 küll ja 0 * 0 = 0 seda ka küll ma saan aru. Ma lihtsalt ei saanud õppejõude käekirjast natuke aru, mida ta kirjutas. Aga praegu saan aru. Aitäh {ping}"
 
 [[response]]
 is_reply = true
@@ -130,15 +130,15 @@ message = "Aitäh."
 
 [[response]]
 is_reply = false
-message = "Okei &ping&"
+message = "Okei {ping}"
 
 [[response]]
 is_reply = false
-message = "Ma olen natuke haige, ma täna ei käinud hulgad aine, ma käin ainult järgmisel nädalal neljapäval päevaõppe gruppis, siis küsin kontrolltöö esimene peale &ping&"
+message = "Ma olen natuke haige, ma täna ei käinud hulgad aine, ma käin ainult järgmisel nädalal neljapäval päevaõppe gruppis, siis küsin kontrolltöö esimene peale {ping}"
 
 [[response]]
 is_reply = false
-message = "Aga millal on esimene kontrolltöö päevaõppe ja sessiooniõppe? &ping&"
+message = "Aga millal on esimene kontrolltöö päevaõppe ja sessiooniõppe? {ping}"
 
 [[response]]
 is_reply = true
@@ -146,7 +146,7 @@ message = "Hästi siis ma lugen sellel slaidid ja teen konspekti ka, sest et ma 
 
 [[response]]
 is_reply = false
-message = "&ping&"
+message = "{ping}"
 
 [[response]]
 is_reply = false
@@ -154,7 +154,7 @@ message = "https://drive.google.com/drive/folders/1qgN4YGRt2Rtb8Bg2uaeXifY19yqp_
 
 [[response]]
 is_reply = false
-message = "&ping& Tere, kas ma saan aru õigesti, et  https://docs.google.com/presentation/d/1iWAcOS36fP_ewtns3gejWvCZuYw0NRQ_/edit#slide=id.p1 selle hulgad süsteemid aine on päevaõppe materjalid slaidid ka jah? Või ainult sessiooniõppe?"
+message = "{ping} Tere, kas ma saan aru õigesti, et  https://docs.google.com/presentation/d/1iWAcOS36fP_ewtns3gejWvCZuYw0NRQ_/edit#slide=id.p1 selle hulgad süsteemid aine on päevaõppe materjalid slaidid ka jah? Või ainult sessiooniõppe?"
 
 [[response]]
 is_reply = true
@@ -166,7 +166,7 @@ message = "Rühmatöö on üks kord, vaid kaks kord."
 
 [[response]]
 is_reply = false
-message = "Hästi saan aru sulle aitäh &ping&"
+message = "Hästi saan aru sulle aitäh {ping}"
 
 [[response]]
 is_reply = false
@@ -186,15 +186,15 @@ message = "Jaah see on õige vastus palun küsida mulle ma tean vastuseid mul on
 
 [[response]]
 is_reply = true
-message = "okei, lihtsalt sa saatsid ekraanipilti selle aine Vabaõpe ja ma küsisin selline küsimus sinuga. &ping&"
+message = "okei, lihtsalt sa saatsid ekraanipilti selle aine Vabaõpe ja ma küsisin selline küsimus sinuga. {ping}"
 
 [[response]]
 is_reply = true
-message = "SA õppid Avatud ülikoolis? &ping&"
+message = "SA õppid Avatud ülikoolis? {ping}"
 
 [[response]]
 is_reply = true
-message = "Saan aru, aga ma õpin Avatud Ülikooli noh gruppis IADB jah see on õgige vabandust &ping&"
+message = "Saan aru, aga ma õpin Avatud Ülikooli noh gruppis IADB jah see on õgige vabandust {ping}"
 
 [[response]]
 is_reply = true
@@ -202,7 +202,7 @@ message = "Okei,aitäh selles. Aga ma ei saa aru lihtsalt kirjutada selles kanal
 
 [[response]]
 is_reply = true
-message = "Tere vabandust mis see aine on? &ping&"
+message = "Tere vabandust mis see aine on? {ping}"
 
 [[response]]
 is_reply = false
@@ -210,19 +210,19 @@ message = "Tere,kõigile ma selle aine deklareerida sellel semestril. Mul on sel
 
 [[response]]
 is_reply = true
-message = "Ma selle aine läbitud kursuse mul hinne on 1. Mul on korras. Ah jah täpsel GUARD ei inverteeri  ma olen nõus sinuga &ping&"
+message = "Ma selle aine läbitud kursuse mul hinne on 1. Mul on korras. Ah jah täpsel GUARD ei inverteeri  ma olen nõus sinuga {ping}"
 
 [[response]]
 is_reply = true
-message = "Jah, see tähendab õige vastuse &ping&"
+message = "Jah, see tähendab õige vastuse {ping}"
 
 [[response]]
 is_reply = true
-message = "Jah, see vastuse valik on õige sa valisid. Tubli &ping&"
+message = "Jah, see vastuse valik on õige sa valisid. Tubli {ping}"
 
 [[response]]
 is_reply = false
-message = "Hästi saan aru sind &ping&"
+message = "Hästi saan aru sind {ping}"
 
 [[response]]
 is_reply = false
@@ -234,7 +234,7 @@ message = "Tere! Selle aine mul on kõik korras ja ma läbitud eelmisel semestri
 
 [[response]]
 is_reply = false
-message = "Hästi &ping&"
+message = "Hästi {ping}"
 
 [[response]]
 is_reply = true
@@ -254,11 +254,11 @@ message = "Ja rühmatöö ei ole asemel testi ma selgitasin juba sulle. Palun lu
 
 [[response]]
 is_reply = false
-message = "Kas sa saad aru mind kõigist? &ping&"
+message = "Kas sa saad aru mind kõigist? {ping}"
 
 [[response]]
 is_reply = false
-message = "Sellel aine ainult läheb rühmatöö punktide, kontrolltöö kaks testi moodle's toimub läheb punkti ja eksam kui on vaja. Kui rühmatöö ja kontrolltöö punktid 50 kokku see on hinne 5. Noh mulle oli kontrolltöö vähem punkti siis ma tegin eksamk majandusõpetuse aine eelmisel sügisel semestril. Vabandust &ping&"
+message = "Sellel aine ainult läheb rühmatöö punktide, kontrolltöö kaks testi moodle's toimub läheb punkti ja eksam kui on vaja. Kui rühmatöö ja kontrolltöö punktid 50 kokku see on hinne 5. Noh mulle oli kontrolltöö vähem punkti siis ma tegin eksamk majandusõpetuse aine eelmisel sügisel semestril. Vabandust {ping}"
 
 [[response]]
 is_reply = true
@@ -286,7 +286,7 @@ message = "Aitäh"
 
 [[response]]
 is_reply = false
-message = "&ping&"
+message = "{ping}"
 
 [[response]]
 is_reply = false
@@ -302,11 +302,11 @@ message = "Saan aru,okei."
 
 [[response]]
 is_reply = false
-message = "Aga sul millal loeng hulgad? &ping&"
+message = "Aga sul millal loeng hulgad? {ping}"
 
 [[response]]
 is_reply = false
-message = "Aitäh &ping&"
+message = "Aitäh {ping}"
 
 [[response]]
 is_reply = false
@@ -322,7 +322,7 @@ message = "Aga see link slaidide jaoks päevaõppe või sessioniõppe? Vabandust
 
 [[response]]
 is_reply = false
-message = "Ma eelmisel aastal ära deklareeritud selle hulgad ained. Ma deklareerisin sellel semestril,vabandust palun. Okei, ma saan aru sulle &ping& , et ma loen sellel aastal sellel semestril slaidide lingis ja õppida pähe ka, sest et varsti on esimene kontrolltöö ja on vaja teen suurepärane ja viskada miinimumi punkti või rohkem, kui ma saan."
+message = "Ma eelmisel aastal ära deklareeritud selle hulgad ained. Ma deklareerisin sellel semestril,vabandust palun. Okei, ma saan aru sulle {ping} , et ma loen sellel aastal sellel semestril slaidide lingis ja õppida pähe ka, sest et varsti on esimene kontrolltöö ja on vaja teen suurepärane ja viskada miinimumi punkti või rohkem, kui ma saan."
 
 [[response]]
 is_reply = true
@@ -338,7 +338,7 @@ message = "Ma ei tea, sest et ma ei ole tänase loengus ülikoolis."
 
 [[response]]
 is_reply = false
-message = "Minu õppeinfo nuppuda ja pärast Õppematerjalid ÕISIS ja seal on hulgad seoseid nuppuda ja lingis on slaidide ja videosalvestuse  &ping&"
+message = "Minu õppeinfo nuppuda ja pärast Õppematerjalid ÕISIS ja seal on hulgad seoseid nuppuda ja lingis on slaidide ja videosalvestuse  {ping}"
 
 [[response]]
 is_reply = true
@@ -354,7 +354,7 @@ message = "Tere! Mul on selline aine, aga see lingis on praeguse slaidid sellel 
 
 [[response]]
 is_reply = false
-message = "&ping& kas sul on füüsika mittefüüsika aine jah?"
+message = "{ping} kas sul on füüsika mittefüüsika aine jah?"
 
 [[response]]
 is_reply = false
@@ -418,15 +418,15 @@ message = "Noh  jah kui sa tegid EX01, siis sulle on 0 punti ja kaitsmise sa ei 
 
 [[response]]
 is_reply = true
-message = "&name& idi nahui"
+message = "{name} idi nahui"
 
 [[response]]
 is_reply = false
-message = "&name&, ma vabandan sinu ees solvangu pärast ähvarduse eest, mille kirjutasin pythoni serverisse viimast korda kõige eest. Vabandan mitte kunagi enam elus Ma palun sind solvangu eest ähvarduse eest kõige eest ma vabandan sinu ees mitte saada midagi dekanaati, mul on vaja õppida ja proovida, ma pean ülikooli lõpetama, palun, palun, palun. Tere,&name&!"
+message = "{name}, ma vabandan sinu ees solvangu pärast ähvarduse eest, mille kirjutasin pythoni serverisse viimast korda kõige eest. Vabandan mitte kunagi enam elus Ma palun sind solvangu eest ähvarduse eest kõige eest ma vabandan sinu ees mitte saada midagi dekanaati, mul on vaja õppida ja proovida, ma pean ülikooli lõpetama, palun, palun, palun. Tere,{name}!"
 
 [[response]]
 is_reply = false
-message = "Ma kõigist vabandan sulle eest &name& abiõppejõude rohkem ma ei tee selles väga palun sind."
+message = "Ma kõigist vabandan sulle eest {name} abiõppejõude rohkem ma ei tee selles väga palun sind."
 
 [[response]]
 is_reply = false
@@ -434,27 +434,27 @@ message = "Halbade asjade ja halbade tegude pärast vabandan sinu ees kõige ees
 
 [[response]]
 is_reply = false
-message = "Palun, &name& abiõppejõude. Väga palun sind."
+message = "Palun, {name} abiõppejõude. Väga palun sind."
 
 [[response]]
 is_reply = false
-message = "Ma vabandan kõigist eest. Ma rohkem ei tee seda ma luban sind &name& abiõppejõud."
+message = "Ma vabandan kõigist eest. Ma rohkem ei tee seda ma luban sind {name} abiõppejõud."
 
 [[response]]
 is_reply = false
-message = "Olgu, tänan vabanduse eest. Aga palun peatage teised üliõpilased, kes tahavad dekanaati sõnumit saata, palun vabandust kõigi TalTechi üliõpilaste eest. Vabandan kõigi eest Nele aidake mind palun palun palun rääkige kõigi üliõpilastega, ma palun Teid ja rääkide püütoni algkursuse aine abiõppejõude, palun ma palun teid, &name&."
+message = "Olgu, tänan vabanduse eest. Aga palun peatage teised üliõpilased, kes tahavad dekanaati sõnumit saata, palun vabandust kõigi TalTechi üliõpilaste eest. Vabandan kõigi eest Nele aidake mind palun palun palun rääkige kõigi üliõpilastega, ma palun Teid ja rääkide püütoni algkursuse aine abiõppejõude, palun ma palun teid, {name}."
 
 [[response]]
 is_reply = false
-message = "Vabandust kõigist eest, palun Teid, &name& abiõppejõud."
+message = "Vabandust kõigist eest, palun Teid, {name} abiõppejõud."
 
 [[response]]
 is_reply = false
-message = "Palun. Väga palun Teid, &name& abiõppejõud. Väga palun Teid."
+message = "Palun. Väga palun Teid, {name} abiõppejõud. Väga palun Teid."
 
 [[response]]
 is_reply = false
-message = "&ping&"
+message = "{ping}"
 
 [[response]]
 is_reply = false
@@ -480,7 +480,7 @@ message = "Jah"
 
 [[response]]
 is_reply = false
-message = "Mis see on? &ping&"
+message = "Mis see on? {ping}"
 
 [[response]]
 is_reply = true
@@ -504,11 +504,11 @@ message = "Mul tekib vigu, missugune koodi tuleb selline vigu? Vabandage, palun.
 
 [[response]]
 is_reply = false
-message = "[0:11] kas see sobib? ja :: -1 kustuta jah? &ping&"
+message = "[0:11] kas see sobib? ja :: -1 kustuta jah? {ping}"
 
 [[response]]
 is_reply = false
-message = "x see on number on vaja kirjutada? jah? &ping&"
+message = "x see on number on vaja kirjutada? jah? {ping}"
 
 [[response]]
 is_reply = false
@@ -536,7 +536,7 @@ message = "aitäh"
 
 [[response]]
 is_reply = false
-message = "korras &ping&"
+message = "korras {ping}"
 
 [[response]]
 is_reply = false
@@ -560,7 +560,7 @@ message = "testeri vigu annab kahe vead."
 
 [[response]]
 is_reply = false
-message = "siin kirjuta palun, ära kirjuta privaatsõnume, sest et mulle vanemad kontrollivad mulle discordi privaatsõnumeid . Vabandust, palun. &ping&"
+message = "siin kirjuta palun, ära kirjuta privaatsõnume, sest et mulle vanemad kontrollivad mulle discordi privaatsõnumeid . Vabandust, palun. {ping}"
 
 [[response]]
 is_reply = false
