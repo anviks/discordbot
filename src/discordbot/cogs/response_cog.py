@@ -1,10 +1,13 @@
 import asyncio
 import random
+import tomllib
+from pathlib import Path
 
-import yaml
 from discord import Member, Message, User
 from discord.ext import commands
 from discord.ext.commands import Bot
+
+RESPONSES_FILE = Path(__file__).parents[3] / 'resources' / 'responses.toml'
 
 
 class CustomResponse:
@@ -19,8 +22,8 @@ class CustomResponse:
 
     @classmethod
     def get_random_response(cls) -> 'CustomResponse':
-        with open('resources/responses.yaml', encoding='utf-8') as f:
-            return cls(**random.choice(yaml.safe_load(f)))
+        with open(RESPONSES_FILE, 'rb') as f:
+            return cls(**random.choice(tomllib.load(f)['response']))
 
 
 class ResponseCog(commands.Cog):
