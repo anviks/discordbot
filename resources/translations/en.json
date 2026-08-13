@@ -1,0 +1,18 @@
+{
+  "dm_command_success": "Direct message sent to {target}.",
+  "en": "english",
+  "et": "estonian",
+  "info_command_no_such_course": "Couldn't find such course.",
+  "mute_command_success": "Muted {target} until {until} for {reason}.",
+  "mute_command_success_no_reason": "Muted {target} until {until}.",
+  "mute_command_target_admin": "You can't mute an admin.",
+  "ping_command_success.one": "Got it, I will ping {target} {count} time.",
+  "ping_command_success.other": "Got it, I will ping {target} {count} times.",
+  "poll_remind_command_no_pings": "Everyone has already reacted.",
+  "poll_remind_command_success": "Sending ping to remind people to vote.",
+  "say_command_success": "Done!",
+  "set_language_success_category": "Ok, I will now speak {language} in {category}",
+  "set_language_success_channel": "Ok, I will now speak {language} in {channel}",
+  "set_language_success_server": "Ok, I will now speak {language} in this server",
+  "unmute_command_success": "Unmuted {target}."
+}

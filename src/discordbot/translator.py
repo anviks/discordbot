@@ -1,6 +1,7 @@
+import json
 import os
 import sqlite3
-from gettext import GNUTranslations, NullTranslations, translation as load_translation
+from pathlib import Path
 
 from discord import Interaction, Message
 from dotenv import load_dotenv
@@ -9,23 +10,29 @@ from .helpers import cache
 
 __all__ = ['Translator']
 
-TRANSLATIONS_DIR = 'resources/translations/'
+PROJECT_ROOT = Path(__file__).parents[2]
+TRANSLATIONS_DIR = PROJECT_ROOT / 'resources' / 'translations'
+FALLBACK_LANGUAGE = 'en'
 
 Id = int
 OptionalId = Id | None
 
 
-INIT_DB_SCRIPT = os.path.join(os.path.dirname(__file__), '..', '..', 'scripts', 'init_db.sql')
+INIT_DB_SCRIPT = PROJECT_ROOT / 'scripts' / 'init_db.sql'
 
 
 class Translator:
     def __init__(self):
         load_dotenv()
-        db_path = os.getenv('SQLITE_DB_PATH')
-        os.makedirs(os.path.dirname(db_path), exist_ok=True)
+        configured_path = os.getenv('SQLITE_DB_PATH')
+        if not configured_path:
+            raise RuntimeError('SQLITE_DB_PATH is not set')
+
+        db_path = PROJECT_ROOT / configured_path
+        db_path.parent.mkdir(parents=True, exist_ok=True)
         self.connection = sqlite3.connect(db_path)
         self._init_db()
-        self._translations: dict[str, GNUTranslations] = {}
+        self._translations: dict[str, dict[str, str]] = {}
         self.load_translations()
 
     def _init_db(self) -> None:
@@ -33,9 +40,14 @@ class Translator:
             self.connection.executescript(f.read())
 
     def load_translations(self) -> None:
-        for language in os.listdir(TRANSLATIONS_DIR):
-            translation = load_translation('messages', localedir=TRANSLATIONS_DIR, languages=[language])
-            self._translations[language] = translation
+        def read(path: Path) -> dict[str, str]:
+            return json.loads(path.read_text(encoding='utf-8'))
+
+        fallback = read(TRANSLATIONS_DIR / f'{FALLBACK_LANGUAGE}.json')
+        for path in sorted(TRANSLATIONS_DIR.glob('*.json')):
+            # Layered over English, so a key a translator hasn't got to yet renders in
+            # English rather than leaking the raw identifier to users.
+            self._translations[path.stem] = fallback | read(path)
 
     def get_translation(
             self,
@@ -43,10 +55,10 @@ class Translator:
             key: str,
             n: int | None = None
     ) -> str:
-        translation: GNUTranslations = self._translations.get(language, NullTranslations())
-        if n is None:
-            return translation.gettext(key)
-        return translation.ngettext(f'{key}.singular', f'{key}.plural', n)
+        strings = self._translations.get(language, self._translations[FALLBACK_LANGUAGE])
+        if n is not None:
+            key = f'{key}.one' if n == 1 else f'{key}.other'
+        return strings.get(key, key)
 
     @cache
     def get_language(

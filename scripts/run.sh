@@ -30,16 +30,6 @@ fi
 # Copy relevant values to .env
 cp "$project_root/.env.$environment" "$project_root/.env"
 
-# Define the translation directory and languages
-translations_directory="$project_root/resources/translations"
-languages=("en" "et")
-domain="messages"
-
-# Loop through each language
-for lang in "${languages[@]}"; do
-    msgfmt -o "$translations_directory/$lang/LC_MESSAGES/$domain.mo" "$translations_directory/$lang/LC_MESSAGES/$domain.po"
-done
-
 uv sync
 
 # Run the main Python script
