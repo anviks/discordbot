@@ -18,16 +18,23 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Service account: no login, no home directory, nothing but an identity to own files.
-if ! id -u "$service" &>/dev/null; then
-    useradd --system --no-create-home --shell /usr/sbin/nologin "$service"
-    echo "Created system user '$service'"
-fi
-
 if [[ ! -d $install_dir/.git ]]; then
     echo "No checkout at $install_dir. Clone it first:" >&2
     echo "  sudo git clone <repo-url> $install_dir" >&2
     exit 1
+fi
+
+if ! command -v uv &>/dev/null; then
+    echo "uv not found in root's PATH." >&2
+    echo "Install it system-wide:" >&2
+    echo "  curl -LsSf https://astral.sh/uv/install.sh | sudo env UV_INSTALL_DIR=/usr/local/bin INSTALLER_NO_MODIFY_PATH=1 sh" >&2
+    exit 1
+fi
+
+# Service account: no login, no home directory, nothing but an identity to own files.
+if ! id -u "$service" &>/dev/null; then
+    useradd --system --no-create-home --shell /usr/sbin/nologin "$service"
+    echo "Created system user '$service'"
 fi
 
 git -C "$install_dir" pull --ff-only
