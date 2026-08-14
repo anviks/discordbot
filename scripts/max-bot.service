@@ -1,0 +1,38 @@
+[Unit]
+Description=Max bot (Discord)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=max-bot
+Group=max-bot
+WorkingDirectory=/usr/local/lib/max-bot
+EnvironmentFile=/etc/max-bot/env
+ExecStart=/usr/local/lib/max-bot/.venv/bin/max-bot
+Restart=always
+RestartSec=5
+
+# Creates /var/lib/max-bot owned by max-bot:max-bot on every start, and
+# keeps it writable under ProtectSystem=strict below. SQLITE_DB_PATH and LOGS_DIR
+# in the environment file point here.
+StateDirectory=max-bot
+StateDirectoryMode=0750
+
+# The service must never be able to modify its own code. ProtectSystem=strict
+# mounts the whole filesystem read-only apart from /dev, /proc, /sys and the
+# state directory, so this holds even if ownership under /usr/local is fumbled.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+# AF_UNIX is needed for journald's stdout/stderr socket, not just for networking.
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+
+[Install]
+WantedBy=multi-user.target
