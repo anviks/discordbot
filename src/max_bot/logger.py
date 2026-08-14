@@ -1,27 +1,31 @@
 import datetime
 import os
+from pathlib import Path
 
-LOGS_DIR = 'chat_logs'
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PROJECT_ROOT = Path(__file__).parents[2]
+
+LOGS_DIR = Path(os.getenv("LOGS_DIR") or PROJECT_ROOT / "chat_logs")
+
+
+def _write(directory: Path, filename: str, header: str, log: str) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    line = f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] " + log
+
+    with open(directory / f"{filename}.txt", "a", encoding="utf-8") as f:
+        f.write(line + "\n")
+
+    print(header + "\n" + line)
 
 
 def entry(server: str, category: str, channel: str, log: str):
-    if not os.path.exists(f"{LOGS_DIR}/{server}" + f"/{category}" * bool(category)):
-        os.makedirs(f"{LOGS_DIR}/{server}" + f"/{category}" * bool(category))
-
-    with open(f"{LOGS_DIR}/{server}" + f"/{category}" * bool(category) + f"/{channel}.txt", "a",
-              encoding="utf-8") as f:
-        f.write(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] " + log + "\n")
-
-    print(f"[{server}" + f" | {category}" * bool(category) + f" | #{channel}]"
-          + f"\n[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] " + log)
+    directory = LOGS_DIR / server / category if category else LOGS_DIR / server
+    header = f"[{server}" + f" | {category}" * bool(category) + f" | #{channel}]"
+    _write(directory, channel, header, log)
 
 
 def entry_dm(user, log: str):
-    if not os.path.exists(f"{LOGS_DIR}/DMs"):
-        os.makedirs(f"{LOGS_DIR}/DMs")
-
-    with open(f"{LOGS_DIR}/DMs/{user}.txt", "a", encoding="utf-8") as f:
-        f.write(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] " + log + "\n")
-
-    print(f"[Direct Messages]"
-          + f"\n[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] " + log)
+    _write(LOGS_DIR / "DMs", str(user), "[Direct Messages]", log)
