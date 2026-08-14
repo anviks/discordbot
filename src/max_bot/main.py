@@ -157,7 +157,7 @@ app.include_router(api)
 app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="web")
 
 
-def run_discord_bot():
+def main():
     @bot.event
     async def on_ready():
         print(f"{bot.user} is now running!")
@@ -227,7 +227,7 @@ def run_discord_bot():
                 "An unexpected error occurred. Please try again later.", ephemeral=True
             )
 
-    async def main():
+    async def run_bot():
         # bot.start() skips the logging setup that bot.run() does, and discord.py's
         # NullHandler means unhandled event errors are silently dropped without this.
         discord.utils.setup_logging()
@@ -239,8 +239,8 @@ def run_discord_bot():
             server.serve(),
         )
 
-    asyncio.run(main())
+    asyncio.run(run_bot())
 
 
 if __name__ == "__main__":
-    run_discord_bot()
+    main()

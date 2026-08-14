@@ -33,4 +33,4 @@ cp "$project_root/.env.$environment" "$project_root/.env"
 uv sync
 
 # Run the main Python script
-"$venv_scripts/discordbot"
+"$project_root/.venv/bin/max-bot"

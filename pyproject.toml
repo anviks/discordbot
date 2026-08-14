@@ -1,6 +1,6 @@
 [project]
-name = "discordbot"
-version = "0.1.0"
+name = "max-bot"
+version = "1.0.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-discordbot = "discordbot.main:run_discord_bot"
+max-bot = "max_bot.main:main"
 
 [build-system]
 requires = ["hatchling"]

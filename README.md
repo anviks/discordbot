@@ -1,4 +1,4 @@
-# Discord Bot
+# Max Bot
 
 This project is a Discord bot built using Python and the `discord.py` library.
 The bot includes several commands and functionalities to interact with users on a Discord server.
@@ -33,8 +33,8 @@ The bot includes several commands and functionalities to interact with users on 
 
 1. Clone the repository:
     ```shell
-    git clone https://github.com/anviks/discordbot.git
-    cd discordbot
+    git clone https://github.com/anviks/max-bot.git
+    cd max-bot
     ```
 
 2. Create a virtual environment (optional):
